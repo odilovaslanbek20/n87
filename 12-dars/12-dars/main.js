@@ -481,18 +481,18 @@
 //==================================================================================================
 // 6-savol
 
-function fn(arr) {
-    if (arr.length < 2) return arr; 
+// function fn(arr) {
+//     if (arr.length < 2) return arr; 
     
-    let last = arr[arr.length - 1]; 
-    arr[arr.length - 1] = last + 1;  
-    arr[arr.length - 2] = last + 1;  
+//     let last = arr[arr.length - 1]; 
+//     arr[arr.length - 1] = last + 1;  
+//     arr[arr.length - 2] = last + 1;  
     
-    return arr;
-  }
+//     return arr;
+//   }
   
-  let arr = [10, 20, 30, 40];
-  console.log(fn(arr));
+//   let arr = [10, 20, 30, 40];
+//   console.log(fn(arr));
   
 //==================================================================================================
 
