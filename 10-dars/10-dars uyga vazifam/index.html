@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+      <form>
+        <input type="text" id="text1" placeholder="Ixtiyoriy ma'lumot kiriting"/>
+        <input type="text" id="text2" placeholder="Qo'shimcha info" />
+        <button id="btn" type="button">Qo‘shish</button>
+        <output id="out">Kiritilgan ma’lumotlar shu yerda ko‘rsatiladi</output>
+      </form>
+      <div class="cards-container" id="cardsContainer"></div>
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 150 },
+          color: { value: "#ffffff" },
+          shape: { type: "circle" },
+          opacity: { value: 0.8, random: true },
+          size: { value: 4, random: true },
+          move: { direction: "bottom", speed: 1 },
+        },
+      });
+    </script>
+  </body>
+</html>
