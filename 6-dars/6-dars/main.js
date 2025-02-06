@@ -44,15 +44,15 @@
 // }
 
 // count()
-let count = 0;
+// let count = 0;
 
-function name(a){
-    for (let i = 1; i < a; i++) {
-        count += i * a
-    }
-    console.log(count);
+// function name(a){
+//     for (let i = 1; i < a; i++) {
+//         count += i * a
+//     }
+//     console.log(count);
     
-}
+// }
 
-name(3)
+// name(3)
 
