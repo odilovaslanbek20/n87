@@ -12,10 +12,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 100px;
 }
 
 .container{
-    width: 430px;
+    width: 460px;
     height: auto;
     border: 3px solid rgb(251, 3, 3);
     margin-top: 100px;
@@ -78,7 +80,7 @@ body{
 .cards{
     display: flex;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
 .cards__left, .cards__right{
@@ -127,9 +129,11 @@ body{
     position: absolute;
     width: 300px;
     left: -100%;
+    top: 5%;
     transition: all 0.3s ease-in;
 }
 
 .active{
     left: 5%;
 }
+
