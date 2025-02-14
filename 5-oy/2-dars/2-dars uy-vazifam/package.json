@@ -1,0 +1,13 @@
+{
+  "name": "5-dars-uy-vazifam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass -w ./scr/scss/main.scss:./scr/css/index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
