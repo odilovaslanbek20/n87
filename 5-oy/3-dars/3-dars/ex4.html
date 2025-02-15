@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cards4">
+      <p>Dokumentga yangi tugma qo'shishlik uchun quyidagi tugmani bosing:</p>
+      <button id="add">Yonngi tugma</button>
+      <button id="addtext">Yangi pragrif</button>
+      <button id="del">Paragrafni o'chirish</button>
+    </div>
+
+    <script>
+      let add = document.getElementById("add");
+      let addtext = document.getElementById("addtext");
+      let del = document.getElementById("del");
+
+      add.onclick = function () {
+        let btnn = document.createElement("button");
+        btnn.innerHTML = "Yangi tugma";
+        document.body.appendChild(btnn);
+      };
+
+      addtext.onclick = function () {
+        let textp = document.createElement("p");
+        textp.innerHTML = "Bu yangi paragrf";
+        document.body.appendChild(textp);
+      };
+
+      del.onclick = function () {
+        document.body.removeChild(document.getElementsByTagName("p")[1]);
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cards2">
+      <h2 id="title">Assalomu aleykum.</h2>
+      <p id="p">
+        Quyidagi tugmani bosilsa, h1 elementiga "class" atributi beriladi. Uning
+        qiymati "greenclass" bo'ladi.
+      </p>
+      <button id="btnY">Meni bosing.</button>
+      <button id="btnQ">Meni ham bosing.</button>
+    </div>
+    <script>
+      let title = document.getElementById("title");
+      let p = document.getElementById("p");
+      let btnY = document.getElementById("btnY");
+      let btnQ = document.getElementById("btnQ");
+
+      btnY.onclick = function () {
+        title.style.color = "green";
+      };
+      btnQ.onclick = function () {
+        p.style.color = "red";
+      };
+    </script>
+  </body>
+</html>

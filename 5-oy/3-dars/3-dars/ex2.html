@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cards1">
+      <h2>Ichimliklar ro'yxati:</h2>
+      <p id="text">Qahva.</p>
+      <p id="text">Choy.</p>
+      <p id="text">Sharbat.</p>
+      <p id="text">Suv.</p>
+      <p id="text">Sut.</p>
+
+      <input id="input" type="text" />
+
+      <button id="btn1">Meni bising</button>
+      <p>
+        Sizning buyurtmangiz:
+        <output style="color: blueviolet" id="out"></output>
+      </p>
+    </div>
+
+    <script>
+      let input = document.getElementById("input");
+      let btn1 = document.getElementById("btn1");
+      let out = document.getElementById("out");
+
+      btn1.onclick = function () {
+        switch (input.value) {
+          case "Qahva":
+            out.textContent = input.value;
+            break;
+          case "Choy":
+            out.textContent = input.value;
+            break;
+          case "Sharbat":
+            out.textContent = input.value;
+            break;
+          case "Suv":
+            out.textContent = input.value;
+            break;
+          case "Sut":
+            out.textContent = input.value;
+            break;
+          default:
+            break;
+        }
+      };
+    </script>
+  </body>
+</html>

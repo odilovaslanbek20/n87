@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="cards">
+      <p id="text">Bu matn almashadi.</p>
+      <p id="text">Bu matn qoladi.</p>
+
+      <button id="btn">Meni bising</button>
+    </div>
+
+    <script>
+      let text = document.getElementById("text");
+      let text1 = document.getElementById("text1");
+      let btn = document.getElementById("btn");
+      let out = document.getElementById("out");
+
+      btn.onclick = function () {
+        text.textContent = "Salom!";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cards3">
+        <h2>JavaScriptda pop-up boxlar</h2>
+        <p id="text1"></p>
+        <p id="text2"></p>
+        <button id="alert">Alert</button>
+        <button id="confirmation">Confirmation</button>
+        <button id="prompt">Prompt</button>
+      </div>
+
+    <script>
+        let alertt = document.getElementById("alert");
+      let confirmation = document.getElementById("confirmation");
+      let promptt = document.getElementById("prompt");
+      let text2 = document.getElementById("text1");
+      let text3 = document.getElementById("text2");
+
+      alertt.onclick = function () {
+        alert("Diqat bu alert box!");
+      };
+      confirmation.onclick = function () {
+        let a = confirm("Shartga rozimisiz");
+        if (a === true) {
+          text2.textContent = "Ha";
+        } else {
+          text2.textContent = "Yo'q";
+        }
+      };
+      promptt.onclick = function () {
+        let b = prompt("Ismingizni kiriting", "Ismingiz");
+        text3.textContent = `Asalomu aleykum ${b} yaxshimisiz.`;
+      };
+    </script>
+</body>
+</html>
