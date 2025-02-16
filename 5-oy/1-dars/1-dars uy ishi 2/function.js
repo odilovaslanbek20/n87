@@ -7,6 +7,7 @@ export function fnNext(img) {
         i = 0;
     }
     img[i].style.display = 'block'; 
+    
 }
 
 export function fnPrev(img) {
@@ -16,6 +17,7 @@ export function fnPrev(img) {
         i = img.length - 1;
     }
     img[i].style.display = 'block'; 
+    
 }
 
 export function fnSet(img1) {

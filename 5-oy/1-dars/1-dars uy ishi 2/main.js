@@ -5,6 +5,7 @@ let prev = document.getElementById("prev");
 let img = document.querySelectorAll(".slider img");
 let img1 = document.querySelectorAll(".slider1 img");
 
+
 next.addEventListener("click", () => {
     fnNext(img)
 })

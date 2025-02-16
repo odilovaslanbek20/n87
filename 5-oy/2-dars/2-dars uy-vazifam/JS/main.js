@@ -6,18 +6,6 @@ let icon = document.getElementById("icon");
 
 let mediaQuery = window.matchMedia("(max-width: 520px)");
 
-let bars = document.getElementById("bars");
-let ext = document.getElementById("ext");
-let menyu = document.querySelector(".menyu");
-
-bars.addEventListener("click", () => {
-  menyu.classList.toggle("active");
-})
-
-ext.addEventListener("click", () => {
-  menyu.classList.toggle("active");
-})
-
 function updateImage() {
   if (mediaQuery.matches) {
     themeImage.src = darkMode ? "./img/LogoWeb.png" : "./img/LogoWeb.png";
@@ -40,16 +28,22 @@ toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark-mode");
   icon.innerHTML = darkMode ? "🌙" : "☀️"; 
   updateImage(); 
-  fnBg()
 });
-
-function fnBg() {
-  darkMode = !darkMode;
-  menyu.classList.toggle("dark-mode");
-}
 
 window.addEventListener("resize", updateResponsiveStyles);
 mediaQuery.addEventListener("change", updateImage);
 
 updateResponsiveStyles();
 updateImage();
+
+let bars = document.getElementById("bars");
+let ext = document.getElementById("ext");
+let menyu = document.querySelector(".menyu");
+
+bars.addEventListener("click", () => {
+  menyu.classList.toggle("active");
+})
+
+ext.addEventListener("click", () => {
+  menyu.classList.toggle("active");
+})

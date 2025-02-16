@@ -20,7 +20,7 @@ export function fnLike(img) {
     img.classList.add("active");
     setTimeout(() => {
       img.classList.remove("active");
-    }, 3000);
+    }, 4000);
   } else {
     img.classList.remove("active");
   }
