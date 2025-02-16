@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-.container {
+.container{
   width: 90%;
   margin: 0 auto;
 }
@@ -19,3 +19,53 @@ a {
   text-decoration: none;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  transition: background-color 0.5s, color 0.5s;
+}
+.dark-mode {
+  background-color: #1a202c;
+  color: white;
+}
+.toggle-btn {
+  position: relative;
+  width: 63px;
+  height: 30px;
+  background-color: #d7a469;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.5s;
+  cursor: pointer;
+  border: 2px solid rgb(245, 0, 0);
+}
+.toggle-btn .icon {
+  width: 30px;
+  height: 30px;
+  background-color: #847c7c;
+  border-radius: 50%;
+  border: 2px solid rgb(245, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s, background-color 0.5s;
+  margin-left: -2px;
+}
+.dark-mode .toggle-btn {
+  background-color: #4b5563;
+}
+.dark-mode .icon {
+  background-color: #374151;
+  transform: translateX(33px);
+}
+
+.active{
+  right: 0;
+  box-shadow: 0px 0px 20px 80px rgb(136, 134, 134);
+}
+
+.active{
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}

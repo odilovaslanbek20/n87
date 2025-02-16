@@ -1,3 +1,129 @@
 @use "./mixin" as *;
 
+.header {
+    &__cards{
+        border-bottom: 1px solid rgb(199, 206, 206);
+        padding: 8px 0;
+        width: 100%;
+        position: fixed;
+    }
+  .container {
+    @include flex(center, space-between, 0, a);
+  }
+  &__cards__max {
+    @include flex(center, center, 10px, a);
+  }
+  &__cards__min {
+    @include flex(center, center, 10px, a);
+  }
+  &__cards__min i {
+    font-size: 13px;
+  }
+  #themeImage {
+    width: 200px;
+    transition: opacity 0.3s ease-in-out; 
+  }
+  &__cards__text{
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
 
+.nav {
+  &__list {
+    @include flex(center, center, 30px, a);
+  }
+  &__link {
+    color: #bc8e5b;
+    font-family: "Roboto";
+    font-weight: 400;
+  }
+  &__linya {
+    width: 100%;
+    height: 1px;
+    background-color: #bc8e5b;
+  }
+  &__btn {
+    width: 180px;
+    height: 37px;
+    border: 2px solid #bc8e5b;
+    @include flex(center, center, 10px, a);
+    border-radius: 8px;
+  }
+  .linya,
+  .linya1 {
+    background-color: transparent;
+    transition: all 0.5s ease-in-out;
+  }
+  .hof:hover .linya {
+    background-color: #bc8e5b;
+  }
+  &__btn:hover .linya1 {
+    background-color: #bc8e5b;
+  }
+}
+
+.menyu{
+    width: 92%;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    right: 0;
+    top: 0;
+    padding: 30px 40px;
+    right: -130%;
+    transition: all 0.5s ease-in-out;
+    &__head{
+        @include flex(center, space-between, 0, a);
+    }
+    &__link{
+        color: #bc8e5b;
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+    }
+    &__cards{
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    &__item{
+        width: 92px;
+    }
+    &__item1{
+        width: 32px;
+        margin-top: 20px;
+    }
+    &__linya{
+        width: 100%;
+        height: 1.5px;
+        background-color: #bc8e5b;
+    }
+    &__call__cards{
+        width: 100%;
+        @include flex(center, center, 0, a);
+        margin-bottom: 0;
+        height: 100vh;
+    }
+    &__btn{
+        @include flex(center, center, 10px, a);
+        width: 100%;
+        height: 50px;
+        border: 2px solid #bc8e5b;
+        border-radius: 12px;
+        transition: all 0.5s linear;
+    }
+    &__btn:active{
+        background-color: #cea97f;
+    }
+    #ext{
+        font-size: 25px;
+    }
+}
+
+#check,
+#bars {
+  display: none;
+  font-size: 20px;
+}

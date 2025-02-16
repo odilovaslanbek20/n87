@@ -8,10 +8,101 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
     <link rel="stylesheet" href="./scr/css/index.css" />
-    <title>Document</title>
+    <title>Najot ta'lim</title>
   </head>
-  <body>
-   
+  <body id="body">
+    <header class="header">
+      <div class="header__cards">
+        <div class="container">
+          <div class="header__cards__max">
+            <a class="header__link" href="./index.html">
+              <img
+                id="themeImage"
+                src="./img/najotLogo.png"
+                alt="Najot ta'lim logotipi"
+              />
+            </a>
+            <div class="header__cards__min">
+              <p class="header__cards__text">Kurslar</p>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+          </div>
+          <div id="toggleBtn" class="toggle-btn">
+            <div id="icon" class="icon">☀️</div>
+          </div>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__item hof">
+                <a class="nav__link" href="#">Bitiruvchilar</a>
+                <div class="nav__linya linya"></div>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Onlayn ta'lim</a>
+                <div class="nav__linya"></div>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Blog</a>
+                <div class="nav__linya"></div>
+              </li>
+              <a class="nav__btn" href="tel:+998788889888">
+                <i class="fa-solid fa-phone" style="color: #bc8e5b"></i>
+                <div class="nav__btn__cards">
+                  <p class="nav__link">+998 78 888 9888</p>
+                  <div class="nav__linya linya1"></div>
+                </div>
+              </a>
+            </ul>
+          </nav>
+          <div id="bars">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+      </div>
+      <div class="menyu">
+        <div class="menyu__cantainer">
+          <div class="menyu__head">
+            <a href="./index.html">
+              <img
+                class="menyu__img"
+                src="./img/logoNajot.png"
+                alt=""
+                width="100"
+              />
+            </a>
+            <div id="ext">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+
+          <div class="menyu__cards">
+            <a class="menyu__link link1" href="#">Bitiruvchilar</a>
+          </div>
+
+          <nav class="menyu__nav">
+            <ul class="menyu__list">
+              <li class="menyu__item">
+                <a class="menyu__link" href="#">Onlayn ta'lim</a>
+                <div class="menyu__linya"></div>
+              </li>
+              <li class="menyu__item1">
+                <a class="menyu__link" href="#">Blog</a>
+                <div class="menyu__linya"></div>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="menyu__call__cards">
+            <a class="menyu__btn" href="tel:+998788889888">
+              <i class="fa-solid fa-phone" style="color: #bc8e5b"></i>
+              <div class="menyu__btn__cards">
+                <p class="menyu__link">+998 78 888 9888</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <script src="./JS/main.js"></script>
   </body>
 </html>

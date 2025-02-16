@@ -1,6 +1,74 @@
-@media (min-width:1232px) {
-    .container{
-        max-width: 1440px;
-    }
+@media (max-width: 970px) {
+  .nav {
+    display: none;
+  }
+  #bars {
+    display: block;
+  }
+  .active{
+    right: 0;
+    transition: all 1s ease-in-out;
+  }
 }
 
+@media (max-width: 520px) {
+  .header {
+    &__cards__text {
+      font-size: 15px;
+    }
+    &__cards__max {
+      @include flex(center, center, 10px, a);
+    }
+    #themeImage {
+      width: 80px !important;
+    }
+  }
+
+  .toggle-btn {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #d7a469;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.5s;
+    cursor: pointer;
+    border: 2px solid rgb(245, 0, 0);
+  }
+  .toggle-btn .icon {
+    width: 25px;
+    height: 25px;
+    background-color: #847c7c;
+    border-radius: 50%;
+    border: 2px solid rgb(245, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s, background-color 0.5s;
+    margin-left: -2px;
+  }
+  .dark-mode .toggle-btn {
+    background-color: #4b5563;
+  }
+  .dark-mode .icon {
+    background-color: #374151;
+    transform: translateX(25px);
+  }
+  
+}
+
+@media (max-width:400px) {
+    .menyu{
+        &__list{
+            @include flex(center, center, 0, column);
+        }
+        &__img{
+            width: 80px;
+            height: 55px;
+        }
+        &__btn{
+            height: 45px;
+        }
+    }
+}
