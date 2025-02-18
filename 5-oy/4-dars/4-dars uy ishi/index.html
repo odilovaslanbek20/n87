@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Cards</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+      }
+      .container {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+      #form {
+        margin: 10px 0;
+      }
+      .input {
+        width: 100%;
+        height: auto;
+        padding: 5px;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid rgb(174, 190, 190);
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+      .btn {
+        width: 100%;
+        margin-top: 10px;
+        background-color: blueviolet;
+        color: #fff;
+        height: auto;
+        padding: 5px;
+        border-radius: 8px;
+        border: none;
+      }
+      .btn:active {
+        background-color: rgb(148, 80, 212);
+      }
+      #gender {
+        outline: none;
+      }
+      #list {
+        width: 300px;
+        height: auto;
+        margin-top: 30px;
+        font-size: 16px;
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>CRUD Cards</h2>
+
+      <form id="form">
+        <input
+          class="input"
+          type="text"
+          id="name"
+          placeholder="Ismingizni kiriting"
+        />
+        <input
+          class="input"
+          type="text"
+          id="surname"
+          placeholder="Familyangizni kiriting"
+        />
+        <input
+          class="input"
+          type="date"
+          id="age"
+          placeholder="Yoshingizni kiriting"
+        />
+        <input
+          class="input"
+          type="number"
+          id="password"
+          placeholder="Phone number"
+        />
+        <label>Jinsi:</label>
+        <select id="select">
+          <option value="" selected disabled>Tanlang</option>
+          <option value="Erkak">Erkak</option>
+          <option value="Ayol">Ayol</option></select
+        ><br />
+        <button class="btn">Qo‘shish</button>
+      </form>
+    </div>
+
+    <ul id="list"></ul>
+
+    <script>
+      let form = document.getElementById("form");
+      let list = document.getElementById("list");
+      let error = document.getElementById("error");
+      let name = document.getElementById("name");
+      let surname = document.getElementById("surname");
+      let age = document.getElementById("age");
+      let password = document.getElementById("password");
+      let select = document.getElementById("select");
+
+      let arr = [];
+      let editIndex = null;
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (
+          name.value.trim() === "" ||
+          surname.value.trim() === "" ||
+          age.value.trim() === "" ||
+          password.value.trim() === "" ||
+          select.value.trim() === ""
+        ) {
+          alert("Malumotlar to'liq kiritilmagan...")
+          return;
+        }
+
+        let obj = {
+          name: name.value,
+          surname: surname.value,
+          Date_of_Birth: age.value,
+          number: password.value,
+          gender: select.value,
+        };
+
+        if (editIndex !== null) {
+          arr[editIndex] = obj;
+          updateUI();
+          editIndex = null;
+        } else {
+          arr.push(obj);
+          add(obj, arr.length - 1);
+        }
+
+        console.log(arr);
+        
+        form.reset();
+      });
+
+      function add(user, index) {
+        let li = document.createElement("li");
+        li.innerHTML = `
+    <b>Ismi:</b> ${user.name} <br>
+    <b>Familya:</b> ${user.surname} <br>
+    <b>Tug'ilgan yili:</b> ${user.Date_of_Birth} <br>
+    <b>Tel raqam:</b> ${user.number} <br>
+    <b>Jinsi:</b> ${user.gender} <br>
+  `;
+
+        let btn = document.createElement("button");
+        btn.textContent = "Edit";
+        btn.onclick = () => editUser(index);
+
+        let btn1 = document.createElement("button");
+        btn1.textContent = "Delete";
+        btn1.onclick = () => deleteUser(index);
+
+        li.appendChild(btn);
+        li.appendChild(btn1);
+        list.appendChild(li);
+      }
+
+      function editUser(index) {
+        let user = arr[index];
+        name.value = user.name;
+        surname.value = user.surname;
+        age.value = user.Date_of_Birth;
+        password.value = user.number;
+        select.value = user.gender;
+
+        editIndex = index;
+      }
+
+      function deleteUser(index) {
+        arr.splice(index, 1);
+        updateUI();
+      }
+
+      function updateUI() {
+        list.innerHTML = "";
+        arr.forEach((user, index) => add(user, index));
+      }
+    </script>
+  </body>
+</html>
