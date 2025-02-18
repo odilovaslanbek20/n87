@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <style>
+      .input {
+        width: 180px;
+      }
+      #text {
+        width: 180px;
+        height: auto;
+        color: rgb(250, 5, 5);
+        padding: 5px;
+        font-size: 14px;
+        border-radius: 8px;
+        transition: all 0.7s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="heading">Sign up for a new account</h2>
+
+    <section class="creat">
+      <div class="container">
+        <div class="cerat__cards">
+          <form id="form">
+            <input class="input" type="text" placeholder="*Name" />
+            <button type="submit">Yuborish</button>
+          </form>
+          <p id="text"></p>
+          <ul id="list" style="list-style: none;"></ul>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let form = document.getElementById("form");
+      let list = document.getElementById("list");
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        let input = document.querySelector(".input");
+        let text = document.getElementById("text");
+        let value = input.value.trim();
+        
+        if (value == "") {
+          text.innerHTML = "Malumot to'liq kiritilmagan..."
+          return;
+        }
+        text.innerHTML = ""
+        let li = document.createElement("li");
+        li.innerHTML = value;
+        list.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
